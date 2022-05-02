@@ -46,12 +46,12 @@
       },
     ];
 
-    products.filter(element => console.log(element.photos?.length));
+    const filteredProducts = products.filter(element => element.photos?.length);
+    console.log(filteredProducts)
     products.sort(function (a, b) {
       return a.price - b.price;
-    })
+    });
     console.log(products);
-
   </script>
 </body>
 
