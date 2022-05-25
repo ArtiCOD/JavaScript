@@ -86,7 +86,9 @@
     "Вы навели на textarea."
      */
     const txtEl = document.querySelector('textarea');
-    txtEl.addEventListener('mouseover', () => console.log("Вы навели на textarea."));
+    txtEl.addEventListener('mouseover', () => {
+      console.log("Вы навели на textarea.");
+    });
 
     /*
     5. Необходимо повесить событие клика на тег ul. В обработчике события в
@@ -96,7 +98,7 @@
     Необходимо использовать делегирование.
      */
     document.querySelector('ul').addEventListener('click', event => {
-      if (event.target.tagName != 'BUTTON') {
+      if (event.target.tagName !== 'BUTTON') {
         return;
       }
       console.log(event.target.textContent);
