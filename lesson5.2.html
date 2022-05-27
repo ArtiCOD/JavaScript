@@ -35,9 +35,9 @@
     "super-dropdown", необходимо использовать методы forEach и querySelectorAll и
     свойство classList у элементов.
      */
-    let dropItemEl = document.querySelectorAll('.dropdown-item');
+    const dropItemEl = document.querySelectorAll('.dropdown-item');
     dropItemEl.forEach(element => {
-      element.classList.add('super-dropdown')
+      element.classList.add('super-dropdown');
     });
 
 
@@ -46,7 +46,7 @@
     присутствует у этого элемента, либо добавить, если такого класса у элемента
     не было.
      */
-    let btnEl = document.querySelector('.btn');
+    const btnEl = document.querySelector('.btn');
     btnEl.classList.toggle('btn-secondary');
 
 
@@ -62,12 +62,13 @@
     "dropdown" следующую разметку:
       <a href="#">link</a>
      */
-    document.querySelector('div.dropdown').insertAdjacentHTML('afterend', '<a href="#">link</a>');
+    document.querySelector('div.dropdown')
+      .insertAdjacentHTML('afterend', '<a href="#">link</a>');
 
     /*
     5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
      */
-    let changeId = document.getElementById('dropdownMenuButton');
+    const changeId = document.getElementById('dropdownMenuButton');
     changeId.id = ('superDropdown');
 
 
@@ -90,7 +91,7 @@
     Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
      */
 
-    let atributes = document.querySelector('.btn.dropdown-toggle').attributes;
+    const atributes = document.querySelector('.btn.dropdown-toggle').attributes;
 
     for (const element of atributes) {
       console.log(`Атрибут ${element.name} содержит значение ${element.value}`);
